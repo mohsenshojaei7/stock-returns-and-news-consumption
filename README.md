@@ -61,10 +61,11 @@ source("Stock returns and news consumption.R")
 
 ```text
 .
-├── data/
-│   └── SVI.csv
 ├── Stock returns and news consumption.R
 └── README.md
+
+Required but not included:
+data/SVI.csv
 ```
 
 ## Tools
