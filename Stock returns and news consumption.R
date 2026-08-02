@@ -11,8 +11,16 @@ library(ggplot2)
 
 ## PART 0
 # Load data using a repository-relative path
-svi <- read.csv(file.path("data", "SVI.csv"))
+data_path <- file.path("data", "SVI.csv")
 
+if (!file.exists(data_path)) {
+  stop(
+    "The dataset is not included in this repository. ",
+    "Place SVI.csv at data/SVI.csv to run the analysis."
+  )
+}
+
+svi <- read.csv(data_path)
 # Remove missing values
 svi <- na.omit(svi)
 
