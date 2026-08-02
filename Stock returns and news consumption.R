@@ -1,17 +1,17 @@
 
 # Stock returns and news consumption   
 # Packages and Libraries
-install.packages(c("lmtest", "car", "sandwich", "plm", "stargazer", "ggplot2"))
-require(lmtest)
-require(car)
-require(sandwich)
-require(plm)
-require(stargazer)
-require(ggplot2)
+# Required packages
+library(lmtest)
+library(car)
+library(sandwich)
+library(plm)
+library(stargazer)
+library(ggplot2)
 
 ## PART 0
-# Load data
-svi <- read.csv("C:/Users/asmam/OneDrive/SEMESTER TWO/FIE401/2. Assignment Two/SVI.csv")
+# Load data using a repository-relative path
+svi <- read.csv(file.path("data", "SVI.csv"))
 
 # Remove missing values
 svi <- na.omit(svi)
